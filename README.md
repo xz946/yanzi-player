@@ -34,7 +34,7 @@ npm i yanzi_player
 
 <script>
 import "yanzi_player/lib/yanzi_player.css";// 引入基本样式
-import yanziPlayer from "yanzi_editor/lib/yanzi_editor.umd.min.js";// 引入核心文件
+import yanziPlayer from "yanzi_player/lib/yanzi_player.umd.min.js";// 引入核心文件
 
 export default {
   name: "App",
@@ -60,6 +60,7 @@ export default {
     :zIndex="zIndex" 
     @uploadLRC="uploadLRC" 
     @uploadMusic="uploadMusic"
+    @uploadMusicIcon="uploadMusicIcon"
 ></yanziPlayer>
 ```
 
