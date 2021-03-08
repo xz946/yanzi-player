@@ -1,11 +1,29 @@
 {
-  "name": "yanzi-player",
-  "version": "0.1.0",
-  "private": true,
+  "name": "yanzi_player",
+  "version": "1.0.0",
+  "private": false,
+  "description": "基于Vue的音乐播放器，在一些博客、笔记的项目里，可以很容易就集成进去一个音乐播放器",
+  "main": "./lib/yanzi_player.umd.min.js",
+  "files": [
+    "lib/static/*",
+    "lib/demo.html",
+    "lib/yanzi_player.umd.min.js",
+    "lib/yanzi_player.css"
+  ],
+  "author": "xiaoyanzi",
+  "license": "ISC",
+  "keywords": [
+    "music",
+    "音乐播放器",
+    "Vue插件",
+    "音乐插件",
+    "audio"
+  ],
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name yanzi_player src/components/yanzi_player.vue"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -39,10 +57,5 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ],
-  "description": "## Project setup ``` yarn install ```",
-  "main": "babel.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  ]
 }

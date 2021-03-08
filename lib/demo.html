@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<title>yanzi_player demo</title>
+<script src="https://unpkg.com/vue"></script>
+<script src="./yanzi_player.umd.js"></script>
+
+<link rel="stylesheet" href="./yanzi_player.css">
+
+
+<div id="app">
+  <demo></demo>
+</div>
+
+<script>
+new Vue({
+  components: {
+    demo: yanzi_player
+  }
+}).$mount('#app')
+</script>
