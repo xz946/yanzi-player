@@ -10,8 +10,15 @@
 
 ![image.png](https://xzlovecyy.com/files/noteimage/xiaozhou/1615195757268.png)
 
-![image.png](https://xzlovecyy.com/files/noteimage/xiaozhou/1615206179932.png)
 
+
+
+
+
+
+<video id="video" controls="" preload="none" poster="https://xzlovecyy.com/files/noteimage/xiaozhou/1615206179932.png">
+      <source id="mp4" src="https://xzlovecyy.com/files/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8.mp4" type="video/mp4">
+</video>
 
 ### 使用方法
 
@@ -71,13 +78,16 @@ export default {
 
 ### 属性
 
-| 属性名称    | 说明                                                         | 类型    | 必填  | 默认值 |
-| ----------- | ------------------------------------------------------------ | ------- | ----- | ------ |
-| zIndex      | 播放器的样式层级                                             | String  | false | 1111   |
-| musicList   | 播放器音乐列表                                               | Array   | false | -      |
-| prePath     | 歌曲地址的域名前缀，如果歌曲地址只是一个文件名，要在前面拼接域名时使用，否则可忽略 | String  | false | ""     |
-| isShowMusic | 是否显示音乐播放器                                           | Boolean | false | false  |
-| initVolume  | 播放器默认音量（0-100）                                      | Number  | false | 50     |
+| 属性名称    | 说明                                                         | 类型    | 必填  | 默认值                       |
+| ----------- | ------------------------------------------------------------ | ------- | ----- | ---------------------------- |
+| zIndex      | 播放器的样式层级                                             | String  | false | 1111                         |
+| musicList   | 播放器音乐列表                                               | Array   | false | <a href="#_85">如下所示</a>  |
+| prePath     | 歌曲地址的域名前缀，如果歌曲地址只是一个文件名，要在前面拼接域名时使用，否则可忽略 | String  | false | ""                           |
+| isShowMusic | 是否显示音乐播放器                                           | Boolean | false | false                        |
+| initVolume  | 播放器默认音量（0-100）                                      | Number  | false | 50                           |
+| showOpenBtn | 是否显示打开播放器的按钮                                     | Boolean | false | true                         |
+|openBtnDrag|打开播放器的按钮是否可拖拽|Boolean|false|true|
+| btnStyle    | 打开播放器按钮的初始样式                                         | Object  | false | <a href="#_118">如下所示</a> |
 
 
 
@@ -93,7 +103,7 @@ export default {
 
 
 
-### 播放器音乐列表JSON示例
+> 歌曲列表数据JSON示例
 
 ```json
 musicList: [
@@ -114,23 +124,45 @@ musicList: [
 ],
 ```
 
+### 按钮样式
 
+> 按钮样式json示例（目前只能配置下面这些样式）
+
+```json
+btnStyle: {
+  color: "white",
+  backgroundColor: "#ccc",
+  width: "50px",
+  height: "50px",
+  right: "30px",
+  bottom: "80px",
+  shadowColor: "#666"
+}
+```
 
 
 
 ### 事件
 
-| 事件名称    | 说明     | 回调参数     |
-| ----------- | -------- | ------------ |
-| uploadLRC   | 上传歌词 | 歌曲对象     |
-| uploadMusic | 上传歌曲 | 歌曲对象     |
-| uploadMusicIcon   | 上传歌手头像 | 歌曲对象 |
+| 事件名称        | 说明         | 回调参数 |
+| --------------- | ------------ | -------- |
+| uploadLRC       | 上传歌词     | 歌曲对象 |
+| uploadMusic     | 上传歌曲     | 歌曲对象 |
+| uploadMusicIcon | 上传歌手头像 | 歌曲对象 |
 
 
 
 ### 方法
 
-| 方法名称   | 说明       | 参数 |
-| ---------- | ---------- | ---- |
-| openPlayer | 显示播放器 | -    |
-|closePlayer|隐藏播放器|-|
+| 方法名称    | 说明       | 参数 |
+| ----------- | ---------- | ---- |
+| openPlayer  | 显示播放器 | -    |
+| closePlayer | 隐藏播放器 | -    |
+
+### 更新日志（倒序）
+
+2021年3月9日16点53分 - 打开播放器按钮可选择是否拖拽
+
+2021年3月9日10点42分 - 可配置打开播放器按钮是否显示、打开播放器按钮的样式
+
+2021年3月8日20点14分 - 初次发布

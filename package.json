@@ -1,12 +1,13 @@
 {
   "name": "yanzi_player",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "private": false,
   "description": "基于Vue的音乐播放器，在一些博客、笔记的项目里，可以很容易就集成进去一个音乐播放器",
-  "main": "./lib/yanzi_player.umd.min.js",
+  "main": "./lib/yanzi_player.umd.js",
   "files": [
     "lib/static/*",
     "lib/demo.html",
+    "lib/yanzi_player.umd.js",
     "lib/yanzi_player.umd.min.js",
     "lib/yanzi_player.css"
   ],
